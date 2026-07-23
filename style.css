@@ -1,0 +1,195 @@
+:root{
+	--gold-center: #EDDF68;
+	--gold-edge: #C4A840;
+	--bg: #000000;
+}
+
+/* Global reset */
+html,body{
+	height:100%;
+	margin:0;
+	background:var(--bg);
+}
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	color:var(--gold-edge);
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+/* Scroll snap container */
+.snap-container{
+	height:100vh;
+	overflow-y:auto;
+	scroll-snap-type:y mandatory;
+}
+
+.panel{
+	scroll-snap-align:center;
+	height:clamp(600px,100vh,1200px);
+	min-height:600px;
+	max-height:1200px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background:var(--bg);
+	padding:1.25rem 2rem 2rem;
+	box-sizing:border-box;
+}
+
+.panel.solution{
+	align-items:center;
+}
+
+.section-inner{max-width:1100px; width:100%; text-align:center}
+
+/* Hero styling */
+.hero-inner{display:flex;flex-direction:column;align-items:center;gap:7.2rem}
+/* Logo image sizing (uses images/Logo_scaled.svg) */
+.logo-img{display:block;margin:0 auto;height:auto}
+.logo-large{width:clamp(978.6px,116.7vmin,2556px)}
+.logo-small{width:clamp(393.93px,72.03735vmin,1375.7436px)}
+
+.hero-title{
+	font-family: 'Liberation Sans', Arial, sans-serif;
+	font-weight:700;
+	font-size:clamp(1.512rem,3.969vmin,3.969rem);
+	line-height:1.05;
+	text-align:center;
+	max-width:1100px;
+	margin:0 1rem;
+}
+.underline{text-decoration:underline; text-decoration-color:var(--gold-edge); text-decoration-thickness:0.12em}
+
+/* Smaller logo on explanation */
+.center-vertical{display:flex;flex-direction:column;align-items:center;justify-content:center}
+
+/* Explanation tweaks */
+.explanation-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.25rem;max-width:1100px;margin:0 auto}
+#explanation .explanation-lead{font-weight:700; font-size:clamp(1.8785rem,5.5539vmin,3.5937rem); margin:0;text-align:justify; max-width:1400px; line-height:1.3; padding-top:1.25rem}
+#explanation .logo-small{flex:0 0 auto; margin:0 auto}
+
+/* Gradient text used across headings and key text */
+.grad-text{
+	background:radial-gradient(circle at center, var(--gold-center) 0%, var(--gold-edge) 70%);
+	-webkit-background-clip:text;
+	background-clip:text;
+	color:transparent;
+}
+
+.lead{font-size:1.05rem;line-height:1.5;margin:1rem 0}
+.section-title{font-size:clamp(1.2rem,3vmin,2.2rem); margin-bottom:1rem}
+
+/* Problems table layout */
+.problems-table{font-size:clamp(2.3595rem,6.4614vw,4.0535rem);text-align:left;border-spacing:1rem 0;vertical-align:middle;margin:2rem auto 0;max-width:980px}
+.problems-table .icon-text{font-weight:700}
+.problems-table img{width:100%;height:auto;display:block;max-width:clamp(60px,8vw,100px)}
+.problems-table td{min-width:clamp(60px,8vw,100px);padding:0.75rem 0;vertical-align:middle}
+.problems-table td:last-child{padding-left:1.5rem}
+
+.center-block{max-width:1100px;margin:0 auto}
+
+.simple-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.6rem}
+
+/* Solution split layout */
+.solution .section-inner{max-width:1200px}
+.split{display:flex;gap:6rem;align-items:center;justify-content:center;flex-wrap:wrap}
+.split .left{flex:1;min-width:340px}
+.split .right{flex:1;min-width:340px;display:flex;align-items:center;justify-content:center}
+
+/* Solution2 layout */
+.solution2-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;max-width:1100px;margin:0 auto}
+.solution2-text{font-size:clamp(1.7rem,4.1vw,2.7rem);font-weight:700;text-align:justify;max-width:1200px;line-height:1.4;margin:0}
+.solution2-image-wrap{display:flex;justify-content:center;align-items:center}
+.solution2-image{width:clamp(213.33px,32vw,466.67px);height:auto;display:block;max-width:100%}
+.solution2-caption{font-size:clamp(1.65rem,3.9vw,2.5rem);font-weight:700;text-align:center;max-width:1100px;line-height:1.4;margin:0}
+
+/* Advantages section */
+.advantages-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem;max-width:1200px;margin:0 auto}
+.advantages-title{font-size:clamp(2.7rem,6.2vw,4rem);margin:0 0 0.5rem;line-height:1.1}
+.advantages-text{font-size:clamp(1.8rem,4.3vw,2.7rem);font-weight:700;text-align:justify;max-width:1200px;line-height:1.4;margin:0}
+
+/* Money section */
+.money-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.8rem;max-width:1250px;margin:0 auto}
+.money-block{display:flex;flex-direction:column;align-items:center;gap:0.7rem;max-width:1100px;width:100%}
+.money-title{font-size:clamp(2.2rem,5vw,3.2rem);margin:0;line-height:1.1;text-align:center}
+.money-text{font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:700;text-align:justify;max-width:1100px;line-height:1.35;margin:0}
+.money-underline{text-decoration:underline;text-decoration-color:var(--gold-edge);text-decoration-thickness:0.12em}
+.money-source{font-size:clamp(0.85rem,1.5vw,1.05rem);color:var(--gold-center);text-decoration:underline;text-align:center;margin-top:0.25rem}
+
+#money .money-block:last-of-type{align-items:flex-start;}
+#money .money-block:last-of-type .money-title,
+#money .money-block:last-of-type .money-text{text-align:left;}
+
+/* Roadmap section */
+.roadmap-inner{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:1.2rem;max-width:1200px;margin:0 auto}
+.roadmap-title{font-size:clamp(2.4rem,5.4vw,3.4rem);margin:0;line-height:1.1;text-align:center;align-self:center}
+.roadmap-intro{font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:700;text-align:justify;max-width:1100px;line-height:1.35;margin:0}
+.roadmap-list{display:block;margin:0 0 0 0.8rem;padding-inline-start:0.8rem;max-width:1100px;width:auto;font-size:clamp(1.45rem,3.4vw,2.05rem);font-weight:700;line-height:1.35;text-align:justify;list-style-position:outside;color:var(--gold-edge)}
+.roadmap-list li{margin-bottom:0.35rem}
+.roadmap-list li::marker{color:var(--gold-edge)}
+.roadmap-list-roman{list-style-type:upper-roman;padding-inline-start:0.8rem;margin-left:0}
+.roadmap-sublist{margin:0.35rem 0 0 0.9rem;padding-inline-start:0.7rem;font-size:clamp(1.25rem,2.9vw,1.7rem);list-style-type:decimal;color:var(--gold-edge)}
+.roadmap-sublist li::marker{color:var(--gold-edge)}
+
+/* Team section */
+.team-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2rem;max-width:1400px;margin:0 auto}
+.team-title{font-size:clamp(2.4rem,5.4vw,3.4rem);margin:0;line-height:1.1;text-align:center}
+.members{display:flex;justify-content:center;flex-direction:row;gap:min(9%, 90px);width:100%;text-align:center;margin-bottom:1rem}
+.member{display:flex;flex-direction:column;align-items:center;gap:0.7rem}
+.member h5{font-size:clamp(1.5rem,3vw,2.4rem);margin:0;font-weight:700}
+.member-role{font-size:clamp(1.1rem,2.2vw,1.7rem);margin:0;font-weight:700;line-height:1.2}
+.member img{object-fit:contain;height:auto;min-width:150px;max-width:19vw;width:100%}
+.description{max-width:1360px;width:100%}
+.description p{font-size:clamp(1.25rem,2.6vw,1.95rem);margin:0;text-align:justify;line-height:1.45;font-weight:700}
+
+/* Closing section */
+.panel.closing{align-items:stretch}
+.closing-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2rem;max-width:1300px;margin:0 auto;text-align:center;min-height:100%;width:100%;position:relative}
+.closing-logo{width:clamp(450px,60vw,900px);margin:0 auto;transform:translateY(-4vh)}
+.closing-text{font-size:clamp(1.7rem,3.9vw,2.6rem);font-weight:700;line-height:1.35;margin:0;max-width:1100px;padding-top:0.6rem}
+.closing-contact{font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:700;line-height:1.45;margin:0}
+.closing-signature{font-size:clamp(1.35rem,3.1vw,2rem);font-weight:700;line-height:1.35;margin:0;padding-top:0.4rem}
+.closing-footer{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0.8rem 1.2rem;position:absolute;bottom:0.25rem;left:50%;transform:translateX(-50%);width:100%;padding:0 1rem;box-sizing:border-box}
+.closing-footer-link,.closing-footer-text{font-size:clamp(0.9rem,1.6vw,1.15rem);font-weight:700;color:var(--gold-center);text-decoration:underline}
+.closing-footer-text{color:var(--gold-edge);text-decoration:none}
+
+/* Problems title sizing */
+#problems .section-title{font-size:clamp(3.1rem,7.75vmin,5.6rem);margin-bottom:4.5rem; padding-top:0}
+#problems .section-inner{padding-top:0.1rem}
+
+/* Solution1 title sizing */
+.bold-right{font-weight:700;text-align:right;font-size:clamp(2.09rem,5.852vmin,3.344rem)}
+#solution1 .section-title{font-size:clamp(3.312rem,8.28vmin,5.52rem);margin-bottom:2rem}
+.inline-logo{height:auto;width:clamp(372.68px,46.754vmin,935.088px);vertical-align:middle;margin-left:1.25rem}
+.segments-wrapper{padding:clamp(27.6px,4.6vmin,55.2px);border-radius:72px;background:transparent;border:2px solid var(--gold-edge);}
+.segments-img{width:clamp(344.08px,62.56vmin,1407.6px);height:auto;border-radius:10px;display:block}
+
+/* Contact link */
+.contact-link{color:var(--gold-center);text-decoration:underline}
+
+/* Small helpers */
+.legal{font-size:.85rem;opacity:.85}
+.legal-page{background:var(--bg);color:var(--gold-edge)}
+.legal-page-shell{max-width:1600px;width:min(94vw, 1600px);margin:0 auto;padding:2rem 2rem 2.5rem;min-height:100vh;display:flex;flex-direction:column;justify-content:center;gap:1rem;box-sizing:border-box}
+.legal-page-shell h1{margin:0 0 0.5rem;font-size:clamp(2rem,3.2vw,2.8rem);font-weight:700}
+.legal-page-shell p{font-size:clamp(1rem,1.7vw,1.25rem);line-height:1.5;margin:0;font-weight:700}
+.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;align-items:start}
+.legal-column{display:flex;flex-direction:column;gap:0.7rem}
+.back-link{color:var(--gold-center);text-decoration:none;font-weight:700;margin-bottom:0.75rem;display:inline-block;font-size:clamp(1rem,1.7vw,1.2rem)}
+.back-link:hover{text-decoration:underline}
+
+@media (max-width:800px){
+	.legal-page-shell{padding:1.25rem 1rem 1.5rem}
+	.legal-grid{grid-template-columns:1fr;gap:1.2rem}
+}
+
+/* Make sure anchors and any text remain readable on black */
+a{color:var(--gold-center)}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+	.logo-wrap svg{width:46vmin}
+	.hero-title{font-size:1.6rem}
+}
+
